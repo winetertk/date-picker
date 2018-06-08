@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日期选择器</title>
+	<link rel="stylesheet" href="css/date-picker.css">
+	<style>
+		.test{
+			display: inline-block;
+		}
+		.a{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<label for="">日期：</label>
+		<input type="text" class="b">
+	</div>
+
+	<div class="test">
+		<label for="">选择日期：</label>
+		<input type="text" class="a">
+		<button>查询</button>
+	</div>
+	<!-- <script src='js/date-picker.js'></script> -->
+	<script src='js/date-picker.js'></script>
+	<script>
+		var aInp = document.querySelector('.a');
+		datepicker(aInp, {
+			format: '-',	   // 日期分隔符
+			dateIcon: true,    // 是否加载图标
+			iconTheam: 'blue'  // blue gray brown 三色选择
+		});
+		var b = document.querySelector('.b');
+		var a = new datepicker(b);
+	</script>
+</body>
+</html>
